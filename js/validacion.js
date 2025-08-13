@@ -6,7 +6,13 @@ function showAlertError() {
     document.getElementById("alert-danger").classList.add("show");
 }
 
+function showAlertErrorPass() {
+    document.getElementById("alert-danger-pass").classList.add("show");
+}
+
+
 const boton = document.getElementById("regBtn");
+
 boton.addEventListener("click", function(event) {
     event.preventDefault();
     const nombre = document.getElementById("nombre").value.trim();
@@ -21,10 +27,11 @@ boton.addEventListener("click", function(event) {
             if(password1.length >= 6) {
             showAlertSuccess();
             }else{
-                showAlertError();
+            showAlertError();
             }
         } else {
-            showAlertError();
+            
+            showAlertErrorPass();
         }
     } else {
         showAlertError();
